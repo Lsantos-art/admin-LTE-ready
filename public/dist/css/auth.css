@@ -4,24 +4,53 @@
         margin: 0;
         padding: 0;
         height: 100%;
-        background: #60a3bc !important;
+        background: #171a1d !important;
     }
     .user_card {
-        height: 400px;
+        height: 500px;
         width: 350px;
         margin-top: auto;
         margin-bottom: auto;
-        background: #f39c12;
+        background: #D6D7D8;
         position: relative;
         display: flex;
         justify-content: center;
         flex-direction: column;
         padding: 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 0px 10px 13px -7px #00c2fdaf, -15px 15px 0px -6px rgba(21,13,46,0);
+        box-shadow: 0px 10px 13px -7px #00c2fdaf, -15px 15px 0px -6px rgba(21,13,46,0);
         border-radius: 5px;
 
+    }
+    .inputbox {
+        position: relative;
+        margin-bottom: 20px;
+        width: 100%
+    }
+    #eye:hover {
+        cursor: pointer;
+    }
+    .inputbox span {
+        position: absolute;
+        top: 7px;
+        left: 11px;
+        transition: 0.5s
+    }
+    .inputbox #eye {
+        position: absolute;
+        top: 13px;
+        right: 8px;
+        transition: 0.5s;
+        color: #171a1d;
+    }
+    .inputbox input:focus~span {
+        transform: translateX(-0px) translateY(-15px);
+        font-size: 12px
+    }
+
+    .inputbox input:valid~span {
+        transform: translateX(-0px) translateY(-15px);
+        font-size: 12px
     }
     .brand_logo_container {
         position: absolute;
@@ -29,7 +58,7 @@
         width: 170px;
         top: -75px;
         border-radius: 50%;
-        background: #60a3bc;
+        background: #171a1d;
         padding: 10px;
         text-align: center;
     }
@@ -44,7 +73,7 @@
     }
     .login_btn {
         width: 100%;
-        background: #c0392b !important;
+        background: #343A40 !important;
         color: white !important;
     }
     .login_btn:focus {
@@ -55,7 +84,7 @@
         padding: 0 2rem;
     }
     .input-group-text {
-        background: #c0392b !important;
+        background: #343A40 !important;
         color: white !important;
         border: 0 !important;
         border-radius: 0.25rem 0 0 0.25rem !important;
@@ -66,5 +95,5 @@
         outline: 0px !important;
     }
     .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-        background-color: #c0392b !important;
+        background-color: #343A40 !important;
     }

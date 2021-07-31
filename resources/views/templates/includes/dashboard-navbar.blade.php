@@ -131,5 +131,32 @@
           <i class="fas fa-th-large"></i>
         </a>
       </li>
+
+      <!-- User actions -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="fas fa-user-alt"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <a href="#" class="dropdown-item">
+            <i class="far fa-address-card"></i> Meu perfil
+        </a>
+            <div class="dropdown-divider"></div>
+        <p style="cursor: pointer" class="dropdown-item" id="logout" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i> Sair
+        </p>
+        </div>
+      </li>
+    <!-- User actions -->
     </ul>
   </nav>
+
+<form form id="logout-form" action="{{ route('logout') }}" method="post" style="display:none;">
+    {{ csrf_field() }}
+</form>
+
+<script>
+    function logout() {
+      document.getElementById("logout-form").submit();
+    }
+</script>
